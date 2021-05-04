@@ -1,0 +1,161 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+ 
+
+}
+
+.links {
+
+     z-index: 1;
+     width: 230px;
+     margin: auto;
+     display: flex;
+     /* padding-left: 10px;
+     padding-right: 10px; */
+     padding-top: 5px;
+     padding-bottom: 5px;
+
+
+     
+
+}
+
+section {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 30vh;
+    width: 100%;
+    position:absolute; bottom:0;
+    /* padding-left: 10;
+    padding-right: 10px; */
+    text-align: center;
+    align-items: center;
+} 
+
+    /* Responsive layout - makes a one column layout instead of a two-column layout */
+    @media (max-width: 1000px) {
+        section {
+          flex-direction: column;
+        }
+
+        p {
+            font-size: 1rem;          }
+      }
+
+/* unvisited link */
+a:link {
+    color: white;
+    text-decoration: none;
+
+  }
+  
+  /* visited link */
+  a:visited {
+    color: white;
+    text-decoration: none;
+
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: white;
+    text-decoration: underline;
+
+  }
+  
+  /* selected link */
+  a:active {
+    color: white;
+    text-decoration: none;
+
+  }
+
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    mix-blend-mode: exclusion;
+}
+
+.container {
+
+    position: absolute;
+    position: bottom;
+    bottom: -10%;
+    left: 10%;
+    z-index: 1;
+    color: white;
+    margin: 16em 8em;
+}
+
+
+p {
+font-size: 2.4rem;
+width:100%;
+color: white;
+font-family: 'Trebuchet MS', sans-serif;
+
+}
+
+h1 {
+    font-size: 3.3rem;
+    width:100%;
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+    
+    }
+
+
+
+.content {
+
+    display: flex;
+    gap: 5em;
+    width: 100%;
+    padding-top: 3em;
+    position: relative;
+}
+
+
+.content1 {
+
+    display: flex;
+    gap: 5em;
+    width: 100%;
+    padding-top: 3em;
+    position: relative;
+}
+
+
+
+/* 
+h1, p {
+flex-basis: 0;
+flex-grow: 1;
+
+} */
+
+
