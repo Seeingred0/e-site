@@ -10,8 +10,8 @@ import HelvetikerFont from 'three/examples/fonts/helvetiker_regular.typeface.jso
 
 // Loading
 // Texture Loading
-// const textureLoader = new THREE.TextureLoader()
-// const normalTexture = textureLoader.load('/textures/NormalMap1.jpeg')
+const textureLoader = new THREE.TextureLoader()
+const normalTexture = textureLoader.load('/textures/NormalMap1.jpeg')
 
 // Debug
 const gui = new dat.GUI()
@@ -32,30 +32,23 @@ const gltfLoader = new GLTFLoader()
 var ecircle = new THREE.Object3D;
 var eobject = new THREE.Object3D;
 
-// const shaderMat = new THREE.ShaderMaterial({
-//     uniforms: {}
-//     vertexShader: _VS
-//     fragmentShader: _FS
-// })
-
 
 
 gltfLoader.load(
-    'static/models/E.glb',
+    '/models/E.glb',
     
-  (gltf) => 
-  {
+  (gltf) => {
 
-ecircle = gltf.scene.children[0]
-ecircle.material.wireframe = false
-eobject = gltf.scene.children[1]
-eobject.position.x = 0
-ecircle.position.x = 0
+ecircle = gltf.scene.children[0];
+ecircle.material.wireframe = false;
+eobject = gltf.scene.children[1];
+eobject.position.x = 0;
+ecircle.position.x = 0;
 
 
 //finished loop, add to scene
-scene.add(ecircle, eobject)  
-console.log(eobject)
+scene.add(ecircle, eobject);  
+// console.log(eobject)
 
 })
 
