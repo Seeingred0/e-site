@@ -10,8 +10,8 @@ import HelvetikerFont from 'three/examples/fonts/helvetiker_regular.typeface.jso
 
 // Loading
 // Texture Loading
-const textureLoader = new THREE.TextureLoader()
-const normalTexture = textureLoader.load('/textures/NormalMap1.jpeg')
+// const textureLoader = new THREE.TextureLoader()
+// const normalTexture = textureLoader.load('/textures/NormalMap1.jpeg')
 
 // Debug
 const gui = new dat.GUI()
@@ -23,12 +23,6 @@ const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
 
 const loader = new THREE.FontLoader();
-
-
-
-
- 
-
 
 
 // Object
@@ -47,11 +41,13 @@ var eobject = new THREE.Object3D;
 
 
 gltfLoader.load(
-    '/models/E.glb',
+    'static/models/E.glb',
+    
   (gltf) => 
   {
+
 ecircle = gltf.scene.children[0]
-ecircle.material.wireframe = true
+ecircle.material.wireframe = false
 eobject = gltf.scene.children[1]
 eobject.position.x = 0
 ecircle.position.x = 0
@@ -60,6 +56,7 @@ ecircle.position.x = 0
 //finished loop, add to scene
 scene.add(ecircle, eobject)  
 console.log(eobject)
+
 })
 
 const geometry = new THREE.TorusGeometry(.7, .2, 16, 100);
@@ -81,15 +78,15 @@ particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3
 
 
 // torus mat
-const material = new THREE.PointsMaterial ( {
-size: 0.009
-})
+const material = new THREE.MeshBasicMaterial()
 
 // particles mat
 const material1 = new THREE.PointsMaterial ( {
     size: 0.003,
     color: "white"
+
     })
+
 
 // Mesh
 const sphere = new THREE.Points(geometry,material)
